@@ -1,0 +1,6 @@
+# Effective only when served at the host root /robots.txt.
+# On the current GitHub project URL, the host-root policy takes precedence.
+User-agent: *
+Allow: /
+
+Sitemap: https://foertscm.github.io/baudienstleister-liesegang/sitemap.xml
