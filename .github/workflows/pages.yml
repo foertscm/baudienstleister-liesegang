@@ -1,0 +1,37 @@
+name: Deploy website to GitHub Pages
+
+# Publish only when explicitly started from the Actions tab or gh CLI.
+# An ordinary push or pull request does not publish the website.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload website files
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: website/dist
+      - name: Deploy to Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
