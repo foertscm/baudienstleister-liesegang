@@ -1,0 +1,36 @@
+# Private customer sources, planning records and local cleanup backup manifest.
+/.local/
+/docs/legal-launch-checklist.md
+/docs/hosting-plan.md
+/docs/review/
+
+# Local tooling and credentials.
+/.agents/
+/.aws/
+/.codex/
+**/.openai/
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Prevent accidentally adding new raw customer deliveries at the root.
+/*.jpeg
+/*.jpg
+/*.png
+/*.pdf
+/customer-request-voice-message.txt
+
+# Reproducible design exports; retain the SVG/PDF brand masters.
+/assets/brand/*.png
+/assets/brand/*.zip
+/assets/brand/*preview.svg
+/assets/maps/woffleben-osm-base.webp
+/assets/maps/service-area.svg
