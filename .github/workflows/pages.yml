@@ -1,8 +1,9 @@
 name: Deploy website to GitHub Pages
 
-# Publish only when explicitly started from the Actions tab or gh CLI.
-# An ordinary push or pull request does not publish the website.
+# Publish on pushes to main or when started manually.
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
