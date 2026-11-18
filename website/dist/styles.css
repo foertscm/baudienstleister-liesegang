@@ -184,6 +184,10 @@ html.photo-viewer-open { overflow: hidden; }
 .footer-legal { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 24px; font-size: .875rem; }
 .footer-legal a { display: inline-flex; align-items: center; min-height: 44px; }
 .footer-legal [aria-current="page"] { text-decoration: underline; text-underline-offset: 4px; }
+.footer-credit { margin-top: 12px; padding-top: 4px; border-top: 1px solid #486054; font-size: .75rem; }
+.footer-credit p { margin: 0; }
+.footer-credit a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: underline; text-underline-offset: 3px; }
+.footer-credit a:hover { color: var(--cream); }
 .legal-page { max-width: 900px; padding-block: 64px 90px; }
 .legal-page h1 { color: var(--green); font-size: clamp(2.25rem, 4.6vw, 3.5rem); margin-bottom: 22px; }
 .legal-intro { max-width: 680px; font-size: 1.08rem; color: var(--muted); }
